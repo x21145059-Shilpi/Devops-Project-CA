@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rehm$-g0&_c-nzb54b7xp-pcnehad63vd4b-4zlwh=o839g1f@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['f82be8f52e1d489ebb5590448f5da2de.vfs.cloud9.eu-west-1.amazonaws.com']
+ALLOWED_HOSTS = ['f82be8f52e1d489ebb5590448f5da2de.vfs.cloud9.eu-west-1.amazonaws.com', 'x21145059elasticbeanstalkdevopsca-env.eba-idva4jth.eu-west-1.elasticbeanstalk.com']
 
 
 # Application definition
