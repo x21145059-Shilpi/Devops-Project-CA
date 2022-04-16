@@ -26,7 +26,7 @@
                 <div class="card-body">
                     <div class="d-flex w-100">
                         <div class="col-8 pe-2">
-                            <div class="summary-title fs-5 border-bottom">Total Products</div>
+                            <div class="summary-title fs-5 border-bottom">Products In Total</div>
                             <div class="summary-count text-end fw-bolder mt-3 px-4">{{ products|intcomma }}</div>
                         </div>
                         <div class="col-4">
@@ -43,7 +43,7 @@
                 <div class="card-body">
                     <div class="d-flex w-100">
                         <div class="col-8 pe-2">
-                            <div class="summary-title fs-5 border-bottom">Total Transactions</div>
+                            <div class="summary-title fs-5 border-bottom">Transactions Count</div>
                             <div class="summary-count text-end fw-bolder mt-3 px-4">{{ sales|intcomma }}</div>
                         </div>
                         <div class="col-4">
@@ -55,12 +55,81 @@
                 </div>
             </div>
         </div>
+                                    <div 
+                                class="col-lg-7 col-md-7 col-sm-14 col-xs-14">
+            <div class="card rounded-0 shadow border-warning text-start summary-card my-3" style="marginleft: 350px;">
+    <canvas id="chart" width="1482" height="738" style="display: block; height: 369px; width: 741px; marginleft: 350px;" class="chartjs-render-monitor"></canvas>
+                               </div>
+                                </div>
     </div>
 
 </section>
+<script>
 
+    //var product = "{{products}}"
+      //var product_no = "{{products_no}}";
+     // var product_name = "{{product_name}}";
+    /*  const product_no = [];
+      const product_name = [];
+      for(let itr= 0; itr < products; itr++){
+          var product_count = "{{ product.count_inventory }}";
+          product_no[itr] = product_count;
+          product_name[itr] = prod
+      }*/
+      //console.log(product);
+       // console.log(product_no);
+       // console.log(product_name);
 
+</script>
+<style>
+    .chart{
+          margin-left: 100;
+          margin-right: 400;
+    }
+</style>
+
+<script>
+    // jquery function
+    $(document).ready(function(){
+            var ctx = document.getElementById('chart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [{%for data in product_detail%}'{{data.name}}',{%endfor%}], //loop through queryset, 
+                    datasets: [{
+                        label: '# of Products',
+                        data: [{%for data in product_detail%}{{data.count_inventory}},{%endfor%}],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)', 
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+    });
+        });
+    </script>
 </div> {% endblock pageContent %} 
 
 <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" /><script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-<script type="text/javascript">
+
+

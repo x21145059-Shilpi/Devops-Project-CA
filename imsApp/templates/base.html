@@ -26,14 +26,24 @@
     <script src="{% static 'assets/bootstrap/js/popper.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'assets/mdb-blogtemplate/js/mdb.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'assets/default/js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+    <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     {% block headerContent %} {% endblock headerContent %}
 </head>
 
 <body class="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
     <div
         class="bg-image"
   style="
-    background-image: url('https://www.corporatevision-news.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/12/Inventory.jpg.webp');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGrbaSGI45foyTP3kXSodksE1N_jEPUI0jEQ&usqp=CAU');
     height: 100vh;
   "
   >
@@ -76,6 +86,7 @@
             </div>
         </div>
     </div>
+    
     <div class="modal fade" id="confirm_modal" role='dialog'>
         <div class="modal-dialog modal-md modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
@@ -156,9 +167,7 @@
 
         })
     </script>
-
-
-    <script src="{% static 'assets/select2/dist/js/select2.full.js' %}"></script>
+   <script src="{% static 'assets/select2/dist/js/select2.full.js' %}"></script>
 </body>
 
 </html>

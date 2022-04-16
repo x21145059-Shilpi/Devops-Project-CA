@@ -45,6 +45,7 @@ def logoutuser(request):
 
 @login_required
 def home(request):
+    context['product_detail'] = Product.objects.all()
     context['page_title'] = 'Home'
     context['categories'] = Category.objects.count()
     context['products'] = Product.objects.count()
