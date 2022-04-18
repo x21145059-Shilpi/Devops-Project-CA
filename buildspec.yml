@@ -10,6 +10,8 @@ phases:
     pre_build:
         commands:
             - python --version
+            - pylint $CODEBUILD_SRC_DIR/*.py
+            - pylint $CODEBUILD_SRC_DIR/ims_django/*.py
 artifacts:
     files:
         - '**/*'
