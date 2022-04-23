@@ -27,7 +27,7 @@
                         {% for product in products %}
                         <tr>
                             <td class="px-2 py-1 align-middle text-center">{{ forloop.counter }}</td>
-                            <td class="px-2 py-1 align-middle">{{ product }}</td>
+                            <td class="px-2 py-1 align-middle">{{ product.name }}</td>
                             <td class="px-2 py-1 align-middle text-end">{{ product.count_inventory }}</td>
                             <td class="px-2 py-1 align-middle text-center">
                                 <a class="btn btn-outline-dark btn-sm" href="{% url 'inventory-history-page' product.pk %}" data-id="{{ product.pk }}" title="View History">

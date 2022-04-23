@@ -18,7 +18,7 @@ from imsApp.models import Category, Product, Stock, Invoice, Invoice_Item
 
 
 context = {
-    'page_title' : 'File Management System',
+    'page_title' : 'Stock-Taking Managemt System',
 }
 
 def login_user(request):
