@@ -18,7 +18,7 @@ phases:
         commands:
             - pytest --cov
             #test
-            #test
+            #test2
 artifacts:
     files:
         - '**/*'
