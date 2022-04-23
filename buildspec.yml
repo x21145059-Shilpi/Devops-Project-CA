@@ -16,7 +16,7 @@ phases:
             - pylint $CODEBUILD_SRC_DIR/ims_django/*.py
     post_build:
         commands:
-            -pytest --cov
+            - pytest --cov
             #test
 artifacts:
     files:
