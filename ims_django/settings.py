@@ -79,11 +79,18 @@ WSGI_APPLICATION = 'ims_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+'ENGINE': 'django.db.backends.postgresql_psycopg2',
+'NAME': 'postgres',
+'USER': 'postgres',
+'PASSWORD': 'Sunshine27',
+'HOST': 'x21145059-database.c3i7owgthhdk.eu-west-1.rds.amazonaws.com',
+'port': '5432'
 }
-
+    #'default': {
+       # 'ENGINE': 'django.db.backends.sqlite3',
+       # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   # }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -109,9 +116,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Manila'
+TIME_ZONE = 'GMT'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
