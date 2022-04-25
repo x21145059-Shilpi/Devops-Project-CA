@@ -1,4 +1,4 @@
-from mixer.backend.django import mixer
+'''from mixer.backend.django import mixer
 import pytest
 
 
@@ -34,5 +34,5 @@ class TestModels:
     def test_Invoice_Item(self):
         item = mixer.blend('imsApp.Invoice_Item', price=20, quantity=30)
         assert item.price == 20
-        assert item.quantity == 30
+        assert item.quantity == 30'''
     
