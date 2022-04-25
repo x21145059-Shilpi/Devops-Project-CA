@@ -93,7 +93,7 @@
     $(document).ready(function(){
             var ctx = document.getElementById('chart').getContext('2d');
             var myChart = new Chart(ctx, {
-                type: 'line',
+                type: 'bar',
                 data: {
                     labels: [{%for data in product_detail%}'{{data.name}}',{%endfor%}], //loop through queryset, 
                     datasets: [{
